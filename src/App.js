@@ -3,6 +3,7 @@ import Navbar from "./components/layouts/Navbar";
 import User from "./components/users/Users";
 import Search from "./components/users/Search";
 import axios from "axios";
+import Alert from './components/layouts/Alert'
 class App extends Component {
   state = {
     users: [],
@@ -43,6 +44,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <div className="container">
+        <Alert alert={this.state.alert}/>
           <Search
             searchUsers={this.searchUsers}
             clearUsers={this.clearUsers}
